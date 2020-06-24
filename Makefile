@@ -18,17 +18,37 @@ PART1 += ft_toupper.c
 PART1 += ft_tolower.c
 PART1 += ft_strdup.c
 PART1 += ft_atoi.c
+PART1 += ft_memset.c
+PART1 += ft_bzero.c
+PART1 += ft_memcpy.c
+# PART1 += ft_memccpy.c
+PART1 += ft_strlcpy.c
+PART1 += ft_strlcat.c
+PART1 += ft_strchr.c
+PART1 += ft_strrchr.c
+# PART1 += ft_memmove.c
+# PART1 += ft_memchr.c
+# PART1 += ft_memcmp.c
+PART1 += ft_strnstr.c
+PART1 += ft_strncmp.c
+# PART1 += ft_calloc.c
 
-
-
-
-PART2 +=
-
+# PART2 += ft_substr.c
+# PART2 += ft_strjoin.c
+# PART2 += ft_strtrim.c
+# PART2 += ft_split.c
+# PART2 += ft_itoa.c
+# PART2 += ft_strmapi.c
+# PART2 += ft_putchar_fd.c
+# PART2 += ft_putstr_fd.c
+# PART2 += ft_putendl_fd.c
+# PART2 += ft_putnbr_fd.c
 
 BONUS +=
 
 
-ADDED +=
+ADDED += ft_min.c
+ADDED += ft_max.c
 
 
 $(NAME):

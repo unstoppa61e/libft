@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/24 17:30:53 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/24 17:30:54 by monoue           ###   ########.fr       */
+/*   Created: 2020/06/22 13:50:34 by monoue            #+#    #+#             */
+/*   Updated: 2020/06/24 15:42:12 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (c < ' ' || c > '~')
-		return (0);
-	return (1);
+	while (*s != c && *s != '\0')
+		s++;
+	if (*s == c)
+		return ((char *)s);
+	else
+		return (NULL);
 }

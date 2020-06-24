@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/24 17:30:53 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/24 17:30:54 by monoue           ###   ########.fr       */
+/*   Created: 2020/06/24 09:40:03 by monoue            #+#    #+#             */
+/*   Updated: 2020/06/24 11:51:55 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	if (c < ' ' || c > '~')
-		return (0);
-	return (1);
+	unsigned char	*p;
+
+	p = b;
+	while (len-- > 0)
+		*p++ = c;
+	return (b);
 }
