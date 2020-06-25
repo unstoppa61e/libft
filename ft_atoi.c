@@ -6,20 +6,13 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 16:06:06 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/24 11:09:36 by monoue           ###   ########.fr       */
+/*   Updated: 2020/06/25 16:37:20 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(char c)
-{
+#include "libft.h"
 
-	if (c == ' ' || c == '\t' || c == '\v' || c == '\f' || c == '\r' \
-	|| c == '\n')
-		return (1);
-	return (0);
-}
-
-int	negative_or_positive(int n)
+static int	negative_or_positive(int n)
 {
 	if (n)
 		return (-1);
@@ -28,9 +21,9 @@ int	negative_or_positive(int n)
 
 int	ft_atoi(const char *str)
 {
-	int	n;
-	int	sign;
-	int	count;
+	long int	n;
+	int			sign;
+	int			count;
 
 	while (ft_isspace(*str))
 		str++;

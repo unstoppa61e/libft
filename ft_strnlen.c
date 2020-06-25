@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/22 13:50:34 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/25 11:02:34 by monoue           ###   ########.fr       */
+/*   Created: 2020/06/25 13:40:30 by monoue            #+#    #+#             */
+/*   Updated: 2020/06/25 13:52:18 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+size_t	ft_strnlen(const char *s, size_t maxlen)
 {
-	while (*s != c && *s != '\0')
-		s++;
-	if (*s == c)
-		return ((char *)s);
-	else
-		return (NULL);
+	return (ft_min(ft_strlen(s), maxlen));
 }

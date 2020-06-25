@@ -31,7 +31,7 @@ PART1 += ft_strrchr.c
 # PART1 += ft_memcmp.c
 PART1 += ft_strnstr.c
 PART1 += ft_strncmp.c
-# PART1 += ft_calloc.c
+PART1 += ft_calloc.c
 
 # PART2 += ft_substr.c
 # PART2 += ft_strjoin.c
@@ -49,6 +49,8 @@ BONUS +=
 
 ADDED += ft_min.c
 ADDED += ft_max.c
+ADDED += ft_strnlen.c
+ADDED += ft_isspace.c
 
 
 $(NAME):
