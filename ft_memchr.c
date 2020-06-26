@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/24 11:18:15 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/26 10:29:48 by monoue           ###   ########.fr       */
+/*   Created: 2020/06/26 13:22:57 by monoue            #+#    #+#             */
+/*   Updated: 2020/06/26 14:00:02 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	ft_memset(s, '\0', n);
+	const char	*s1;
+
+	s1 = s;
+	while (n-- > 0)
+	{
+		if (*s1 == (char)c)
+			return ((void *)s1);
+		s1++;
+	}
+	return (NULL);
 }
+
+// int	main()
+// {
+// 	char	*str = "abcdefg";
+// 	char	c = 'd';
+// }

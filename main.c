@@ -1,33 +1,84 @@
-// #include <stdio.h>
-// #include <string.h>
-// #include <stdlib.h>
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-// int	main()
-// {
-// 	// strlcat
-// 	char	str1[52] = "abcdef"; //4
-// 	char	*str2 = "def";// 3
-// 	ft_strlcat(str1, str2, 17);
-// 	printf("%zu\n", ft_strlcat(str1, str2, 1));
-// 	printf("%s\n", str1);
+int	main()
+{
+	// // atoi start
+	// printf("%d\n", atoi("012"));
+	// printf("%d\n", ft_atoi("012"));
+	// printf("%d\n", atoi("-0012"));
+	// printf("%d\n", ft_atoi("-0012"));
 
-// 	// calloc
-// 	int *ptr,*p;
-// 	int i;
+	// // atoi end
 
-// 	/* 500個のintサイズのメモリを確保 */
-// 	ptr = (int *)calloc(500,sizeof(int));
-// 	if(ptr == NULL) {
-// 		printf("メモリが確保できません\n");
-// 		exit(EXIT_FAILURE);
-// 	}
-// 	p = ptr;
-// 	for (i=0; i<500; i++) {
-// 		*p = i;
-// 		printf("%d ",*p);
-// 		p++;
-// 	}
-// 	/* メモリの開放 */
-// 	free(ptr);
-// 	return 0;
-// }
+	// // strlcat start
+	// char	str1[52] = "abcdef"; //4
+	// char	*str2 = "xyz";// 3
+	// ft_strlcat(str1, str2, 17);
+	// printf("%zu\n", ft_strlcat(str1, str2, 1));
+	// printf("%s\n", str1);
+	// // strlcat end
+
+
+	// // calloc start
+	// int *ptr,*p;
+	// int i;
+
+	// /* 500個のintサイズのメモリを確保 */
+	// ptr = (int *)calloc(500,sizeof(int));
+	// if(ptr == NULL) {
+	// 	printf("メモリが確保できません\n");
+	// 	exit(EXIT_FAILURE);
+	// }
+	// p = ptr;
+	// for (i=0; i<500; i++) {
+	// 	*p = i;
+	// 	printf("%d ",*p);
+	// 	p++;
+	// }
+	// /* メモリの開放 */
+	// free(ptr);
+	// return 0;
+	// // calloc end
+
+	// // memcpy start
+	// char str1[128] = {1,1,1,1,1,1,1};
+	// char str2[] = "ab\0cde";        /* 途中に空文字のある文字列 */
+	// int i;
+
+	// printf("コピー前　中身の確認\n");
+	// for (i=0; i<7; i++)
+	// 		printf("%#x ",str1[i]);
+	// printf("\n");
+
+	// ft_memcpy(str1, str2, 5);
+
+	// printf("コピー後　中身の確認\n");
+	// for (i=0; i<7; i++)
+	// 		printf("%#x ",str1[i]);
+	// printf("\n");
+
+	// return 0;
+	// // memcpy end
+
+	// // strnstr start
+	// char	*str1 = "abcdefgh";
+	// char	*str2 = "cde";
+	// printf("%s\n", strnstr(str1, str2, 4));
+	// printf("%s\n", ft_strnstr(str1, str2, 4));
+	// printf("%s\n", strnstr(str1, str2, 5));
+	// printf("%s\n", ft_strnstr(str1, str2, 5));
+	// printf("%s\n", strnstr(str1, str2, 6));
+	// printf("%s\n", ft_strnstr(str1, str2, 6));
+	// // strnstr end
+
+	// // memchr start
+	// char str[] = "abcdef\0ghij";    /* 途中に空文字のある文字列 */
+	// char *p;
+
+	// p = memchr(str, 'h', 12);
+	// printf("検索文字は文字列の%ld番目\n",p - str);
+	// return 0;
+	// // memchr end
+}

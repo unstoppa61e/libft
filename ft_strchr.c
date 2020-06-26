@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 13:50:34 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/25 11:02:34 by monoue           ###   ########.fr       */
+/*   Updated: 2020/06/26 11:04:52 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,5 @@ char	*ft_strchr(const char *s, int c)
 		s++;
 	if (*s == c)
 		return ((char *)s);
-	else
-		return (NULL);
+	return (NULL);
 }

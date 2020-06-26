@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 13:50:34 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/24 16:56:42 by monoue           ###   ########.fr       */
+/*   Updated: 2020/06/26 11:11:34 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,3 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return ((unsigned char)*s1 - (unsigned char)*s2);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-// int	main()
-// {
-// 	printf("%d\n", strncmp("abcde", "abez", 5));
-// 	printf("%d\n", ft_strncmp("abcde", "abez", 5));
-// 	// printf("%d\n", ft_strncmp("abcde", "abez", 5));
-// }
