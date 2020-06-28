@@ -6,24 +6,17 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 16:06:06 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/26 11:12:06 by monoue           ###   ########.fr       */
+/*   Updated: 2020/06/28 09:21:53 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	negative_or_positive(int n)
-{
-	if (n)
-		return (-1);
-	return (1);
-}
-
 int	ft_atoi(const char *str)
 {
-	long int	n;
-	int			sign;
-	int			count;
+	long	n;
+	long	sign;
+	int		count;
 
 	while (ft_isspace(*str))
 		str++;
@@ -38,11 +31,11 @@ int	ft_atoi(const char *str)
 	count = 0;
 	while (*str >= '0' && *str <= '9')
 	{
-		n *= 10;
-		n += (*str++ - '0');
-		count++;
+		n = n * 10 + (*str++ - '0');
+		if (n)
+			count++;
 	}
 	if (count > 10)
 		return (sign - 1);
-	return (negative_or_positive(sign) * n);
+	return sign ? (int)-n : (int)n;
 }

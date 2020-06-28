@@ -55,6 +55,7 @@ ADDED += ft_isspace.c
 
 $(NAME):
 	$(CC) -c $(FLAGS) $(SRCS) -I libft.h
+	# $(CC) -c $(FLAGS) $(SRCS) -I ./includes
 	ar rcs $(NAME) $(OBJS)
 
 all: $(NAME)
