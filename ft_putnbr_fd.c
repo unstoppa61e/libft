@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_max.c                                           :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/24 16:40:05 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/29 09:26:48 by monoue           ###   ########.fr       */
+/*   Created: 2020/06/29 16:23:14 by monoue            #+#    #+#             */
+/*   Updated: 2020/06/29 16:31:59 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_max(int n1, int n2)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (n1 >= n2)
-		return (n1);
-	return (n2);
+	long	n2;
+	long	d;
+
+	n2 = (long)n;
+	d = 1;
+	if (n2 < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n2 *= -1;
+	}
+}
+
+int	main()
+{
+
 }

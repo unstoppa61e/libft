@@ -81,4 +81,20 @@ int	main()
 	// printf("検索文字は文字列の%ld番目\n",p - str);
 	// return 0;
 	// // memchr end
+
+// 	// strmapi start
+// char	rot_n(unsigned int n, char c)
+// {
+// 	return (c + n);
+// }
+
+// #include <stdio.h>
+
+// int	main()
+// {
+// 	char	(*f)(unsigned int, char);
+// 	f = rot_n;
+// 	printf("%s\n", ft_strmapi("abcde", f));
+// }
+// 	// strmapi end
 }

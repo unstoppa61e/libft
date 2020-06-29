@@ -6,13 +6,11 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 15:32:49 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/23 16:05:05 by monoue           ###   ########.fr       */
+/*   Updated: 2020/06/29 12:21:18 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *str);
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {

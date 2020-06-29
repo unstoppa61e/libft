@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_max.c                                           :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/24 16:40:05 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/29 09:26:48 by monoue           ###   ########.fr       */
+/*   Created: 2020/06/29 16:18:05 by monoue            #+#    #+#             */
+/*   Updated: 2020/06/29 16:21:03 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_max(int n1, int n2)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if (n1 >= n2)
-		return (n1);
-	return (n2);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
