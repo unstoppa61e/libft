@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/22 13:50:34 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/30 09:52:54 by monoue           ###   ########.fr       */
+/*   Created: 2020/06/30 16:38:52 by monoue            #+#    #+#             */
+/*   Updated: 2020/06/30 16:53:43 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+int		ft_lstsize(t_list *lst)
 {
-	size_t	srclen;
+	int	count;
 
-	srclen = ft_strlen(src);
-	if (dstsize == 0)
-		return (srclen);
-	while (dstsize-- > 1 && *src != '\0')
-		*dst++ = *src++;
-	*dst = '\0';
-	return (srclen);
+	if (lst == NULL)
+		return (0);
+	count = 1;
+	while (lst->next)
+	{
+		lst = lst->next;
+		count++;
+	}
+	return (count);
 }

@@ -4,8 +4,9 @@ PART1 =
 PART2 =
 BONUS =
 ADDED =
-SRCS = $(PART1) $(PART2) $(BONUS) $(ADDED)
+SRCS = $(PART1) $(PART2) $(ADDED)
 OBJS = $(SRCS:.c=.o)
+BOBJS = $(BONUS:.c=.o)
 FLAGS = -Wall -Wextra -Werror
 
 PART1 += ft_isalnum.c
@@ -44,8 +45,15 @@ PART2 += ft_putstr_fd.c
 PART2 += ft_putendl_fd.c
 PART2 += ft_putnbr_fd.c
 
-BONUS +=
-
+BONUS += ft_lstnew.c
+BONUS += ft_lstadd_front.c
+BONUS += ft_lstsize.c
+BONUS += ft_lstlast.c
+BONUS += ft_lstadd_back.c
+# BONUS += ft_lstdelone.c
+# BONUS += ft_lstclear.c
+# BONUS += ft_lstiter.c
+# BONUS += ft_lstmap.c
 
 ADDED += ft_min.c
 ADDED += ft_max.c
@@ -56,9 +64,10 @@ ADDED += ft_ctoi.c
 
 
 $(NAME):
-	$(CC) -c $(FLAGS) $(SRCS) -I libft.h
+	$(CC) -c $(FLAGS) $(SRCS) $(BONUS) -I libft.h
+	# $(CC) -c $(FLAGS) $(SRCS) -I libft.h
 	# $(CC) -c $(FLAGS) $(SRCS) -I ./includes
-	ar rcs $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS) $(BOBJS)
 
 all: $(NAME)
 
@@ -70,4 +79,9 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+bonus:
+	$(CC) -c $(FLAGS) $(SRCS) $(BONUS) -I libft.h
+	# $(CC) -c $(FLAGS) $(SRCS) -I ./includes
+	ar rcs $(NAME) $(OBJS) $(BOBJS)
+
+.PHONY: all clean fclean re bonus

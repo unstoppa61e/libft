@@ -96,5 +96,29 @@ int	main()
 // 	f = rot_n;
 // 	printf("%s\n", ft_strmapi("abcde", f));
 // }
-// 	// strmapi end
+// 	// strmapi en	t_list *l = ft_lstnew(strdup("nyacat"));
+
+	// // lstadd_front start
+    // t_list *n = ft_lstnew(strdup("OK"));
+	// ft_lstadd_front(&l, n);
+	// printf("%s\n", l->content);
+	// // lstadd_front end
+
+	// // lstsize start
+	// t_list *l;
+
+	// l = ft_lstnew(ft_strdup("1"));
+	// l->next = ft_lstnew(ft_strdup("2"));
+	// l->next->next = ft_lstnew(ft_strdup("3"));
+	// printf("%d\n", ft_lstsize(l));
+	// // lstsize end
+
+	// // lstlast start
+	// t_list	*l;
+
+	// l = ft_lstnew(ft_strdup("1"));
+	// l->next = ft_lstnew(ft_strdup("2"));
+	// l->next->next = ft_lstnew(ft_strdup("3"));
+	// printf("%s\n", ft_lstlast(l)->content);
+	// // lstlast end
 }

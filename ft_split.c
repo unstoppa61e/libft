@@ -6,13 +6,13 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 17:04:52 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/29 16:42:01 by monoue           ###   ########.fr       */
+/*   Updated: 2020/06/30 11:58:21 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_count_words(char *str, char c)
+static int		ft_count_words(char *str, char c)
 {
 	int	count;
 
@@ -30,7 +30,30 @@ int		ft_count_words(char *str, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static size_t	set_start(size_t start, size_t end, char const *s, char c)
+{
+	start = end;
+	while (start < ft_strlen(s) && s[start] == c)
+		start++;
+	return (start);
+}
+
+static size_t	set_end(size_t start, size_t end, char const *s, char c)
+{
+	end = start + 1;
+	while (s[end] != '\0' && s[end] != c)
+		end++;
+	return (end);
+}
+
+void			free_all(char **arr, size_t i)
+{
+	while (i >= 0)
+		free(arr[i--]);
+	free(arr);
+}
+
+char			**ft_split(char const *s, char c)
 {
 	char	**arr;
 	size_t	count;
@@ -47,13 +70,13 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	while (count-- > 0)
 	{
-		end = start + 1;
-		while (s[end] != '\0' && s[end] != c)
-			end++;
-		arr[i++] = ft_substr(s, start, end - start);
-		start = end;
-		while (start < ft_strlen(s) && s[start] == c)
-			start++;
+		end = set_end(start, end, s, c);
+		if (!(arr[i++] = ft_substr(s, start, end - start)))
+		{
+			free_all(arr, --i);
+			return (NULL);
+		}
+		start = set_start(start, end, s, c);
 	}
 	arr[i] = NULL;
 	return (arr);
@@ -62,10 +85,7 @@ char	**ft_split(char const *s, char c)
 // #include <stdio.h>
 // int	main()
 // {
-	// printf("%d\n", 1);
-	// printf("%d\n", ft_count_words("axxbxxcccxxx", 'x'));
-	// char	*arr = "axxbxxcccxxx";
-	// char	*sep = "cab";
+// 	char	*arr = "axxbxxcccxxx";
 // 	char	**arrs = ft_split(arr, 'x');
 // 	int	i;
 // 	i = 0;
