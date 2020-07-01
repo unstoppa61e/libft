@@ -50,8 +50,8 @@ BONUS += ft_lstadd_front.c
 BONUS += ft_lstsize.c
 BONUS += ft_lstlast.c
 BONUS += ft_lstadd_back.c
-# BONUS += ft_lstdelone.c
-# BONUS += ft_lstclear.c
+BONUS += ft_lstdelone.c
+BONUS += ft_lstclear.c
 # BONUS += ft_lstiter.c
 # BONUS += ft_lstmap.c
 

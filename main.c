@@ -99,6 +99,7 @@ int	main()
 // 	// strmapi en	t_list *l = ft_lstnew(strdup("nyacat"));
 
 	// // lstadd_front start
+	// t_list *l;
     // t_list *n = ft_lstnew(strdup("OK"));
 	// ft_lstadd_front(&l, n);
 	// printf("%s\n", l->content);
@@ -121,4 +122,19 @@ int	main()
 	// l->next->next = ft_lstnew(ft_strdup("3"));
 	// printf("%s\n", ft_lstlast(l)->content);
 	// // lstlast end
+
+	// lstadd_back start
+	// t_list *l = ((void *)0);
+	// t_list *n = ft_lstnew(ft_strdup("OK"));
+
+	// ft_lstadd_back(&l, n);
+	// if (l == n && !ft_strncmp(l->content, "OK", 2))
+	// {
+	// 	free(l->next);
+	// 	free(l);
+	// 	printf("%s\n", "GOOD!");
+	// }
+	// else
+	// 	printf("%s\n", "BAD...");
+	// lstadd_back end
 }

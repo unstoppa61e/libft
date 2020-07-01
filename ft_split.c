@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 17:04:52 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/30 11:58:21 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/01 17:00:13 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char			**ft_split(char const *s, char c)
 	size_t	i;
 
 	count = ft_count_words((char *)s, c);
-	if (!(arr = malloc((count + 1) * sizeof arr)))
+	if (!(arr = malloc((count + 1) * sizeof *arr)))
 		return (NULL);
 	start = 0;
 	while (s[start] != '\0' && s[start] == c)
@@ -82,13 +82,13 @@ char			**ft_split(char const *s, char c)
 	return (arr);
 }
 
-// #include <stdio.h>
-// int	main()
-// {
-// 	char	*arr = "axxbxxcccxxx";
-// 	char	**arrs = ft_split(arr, 'x');
-// 	int	i;
-// 	i = 0;
-// 	while (arrs[i])
-// 		printf("%s\n", arrs[i++]);
-// }
+#include <stdio.h>
+int	main()
+{
+	char	*arr = "axxbxxcccxxx";
+	char	**arrs = ft_split(arr, 'x');
+	int	i;
+	i = 0;
+	while (arrs[i])
+		printf("%s\n", arrs[i++]);
+}
