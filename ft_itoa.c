@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 11:39:21 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/30 11:55:10 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/02 11:24:01 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,14 @@ static size_t	ft_count_letters(long n)
 	return (count);
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*p;
 	long	n2;
 	long	d;
 	int		i;
 
-	if (!(p = malloc((ft_count_letters(n) + 1) * sizeof *p)))
+	if (!(p = malloc((ft_count_letters(n) + 1) * sizeof(*p))))
 		return (NULL);
 	i = 0;
 	if (n < 0)
@@ -60,18 +60,3 @@ char		*ft_itoa(int n)
 	p[i] = '\0';
 	return (p);
 }
-
-// #include <limits.h>
-// #include <stdio.h>
-// int	main()
-// {
-// 	// ft_itoa(-1);
-// 	// ft_itoa(0);
-// 	// ft_itoa(1);
-// 	// ft_itoa(9);
-// 	printf("%s", ft_itoa(10000));
-// 	// int	n = -12345;
-// 	// int	n2 = 20202020;
-// 	// printf("%s\n", ft_itoa(n));
-// 	// printf("%s\n", ft_itoa(n2));
-// }

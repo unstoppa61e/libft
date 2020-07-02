@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 16:01:19 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/26 16:11:45 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/02 11:37:52 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*p;
 	int		i;
 
-	p = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof *p);
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	p = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(*p));
 	if (p == NULL)
 		return (NULL);
 	i = 0;
@@ -28,9 +30,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	p[i] = '\0';
 	return (p);
 }
-
-// #include <stdio.h>
-// int	main()
-// {
-
-// }

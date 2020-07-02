@@ -6,13 +6,13 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 13:50:34 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/23 14:45:28 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/02 11:38:09 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	int len;
 

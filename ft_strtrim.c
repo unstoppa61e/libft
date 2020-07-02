@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 16:09:52 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/29 10:08:54 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/02 11:04:03 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	start = 0;
 	while (s1[start] != '\0' && ft_strchr(set, s1[start]))
 		start++;

@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 17:04:52 by monoue            #+#    #+#             */
-/*   Updated: 2020/07/01 17:00:13 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/02 14:32:07 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,16 +61,16 @@ char			**ft_split(char const *s, char c)
 	size_t	end;
 	size_t	i;
 
+	if (s == NULL)
+		return (NULL);
 	count = ft_count_words((char *)s, c);
-	if (!(arr = malloc((count + 1) * sizeof *arr)))
+	if (!(arr = malloc((count + 1) * sizeof(*arr))))
 		return (NULL);
 	start = 0;
-	while (s[start] != '\0' && s[start] == c)
+	while ((s[start] != '\0' && s[start] == c) || (i = 0))
 		start++;
-	i = 0;
-	while (count-- > 0)
+	while (count-- > 0 && (end = set_end(start, end, s, c)))
 	{
-		end = set_end(start, end, s, c);
 		if (!(arr[i++] = ft_substr(s, start, end - start)))
 		{
 			free_all(arr, --i);
@@ -80,15 +80,4 @@ char			**ft_split(char const *s, char c)
 	}
 	arr[i] = NULL;
 	return (arr);
-}
-
-#include <stdio.h>
-int	main()
-{
-	char	*arr = "axxbxxcccxxx";
-	char	**arrs = ft_split(arr, 'x');
-	int	i;
-	i = 0;
-	while (arrs[i])
-		printf("%s\n", arrs[i++]);
 }

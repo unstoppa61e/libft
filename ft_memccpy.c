@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/24 11:27:09 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/30 09:51:56 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/02 12:47:02 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,3 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// char *msg = "This is the string: not copied";
-
-// int main() {
-
-//     char buffer[80];
-// 	char	*pdest;
-//     // memset( buffer, '\0', 80 );
-//     pdest = ft_memccpy( buffer, msg, ':', 80 );
-// 	*pdest = '\0';
-//     printf( "%s\n", buffer );
-//   }

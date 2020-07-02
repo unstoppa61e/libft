@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 16:06:06 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/28 09:21:53 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/02 11:17:31 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ int	ft_atoi(const char *str)
 	}
 	if (count > 10)
 		return (sign - 1);
-	return sign ? (int)-n : (int)n;
+	return (sign ? (int)-n : (int)n);
 }

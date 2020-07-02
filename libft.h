@@ -1,22 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/02 11:56:31 by monoue            #+#    #+#             */
+/*   Updated: 2020/07/02 14:42:21 by monoue           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct	s_list
+typedef struct		s_list
 {
 	void			*content;
 	struct s_list	*next;
-}				t_list;
+}					t_list;
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int n);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
-int 	ft_toupper(int c);
-int 	ft_tolower(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 int		ft_atoi(const char *str);
 char	*ft_strdup(const char *s1);
 size_t	ft_strlen(const char *str);
@@ -31,7 +43,7 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_min(int n1, int n2);
 int		ft_max(int n1, int n2);
-char	*strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 void	*ft_calloc(size_t count, size_t size);
 size_t	ft_strnlen(const char *s, size_t maxlen);
 int		ft_isspace(char c);

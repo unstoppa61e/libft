@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 15:32:49 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/29 12:21:18 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/02 11:36:12 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strdup(const char *s1)
 	char	*s2;
 	size_t	i;
 
-	s2 = malloc(sizeof *s2 * (ft_strlen(s1) + 1));
+	s2 = malloc(sizeof(*s2) * (ft_strlen(s1) + 1));
 	if (s2 == NULL)
 		return (NULL);
 	i = 0;

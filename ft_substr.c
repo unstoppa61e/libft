@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 13:48:12 by monoue            #+#    #+#             */
-/*   Updated: 2020/06/30 11:09:17 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/02 11:02:22 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	minlen;
 	size_t	i;
 
+	if (s == NULL)
+		return (NULL);
 	minlen = ft_max(ft_min(ft_strlen(s) - start, len), 0);
 	p = malloc((minlen + 1) * sizeof *p);
 	if (p == NULL)
