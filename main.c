@@ -4,9 +4,8 @@
 #include <ctype.h>
 #include <limits.h>
 
-
-// int	main() // endline = 313
-// {
+int	main() // endline = 313
+{
 ////////////////////////////////
 //         ft_memset          //
 ////////////////////////////////
@@ -159,16 +158,17 @@
 //         ft_strlcat         //
 ////////////////////////////////
 
-	// char	*str = "test";
-	// char	buff1[0xF00] = "strlcat ";
-	// char	buff2[0xF00] = "strlcat ";
-	// size_t	max = strlen(str) + strlen(buff1);
-
-	// strlcat(buff1, str, max);
-	// ft_strlcat(buff2, str, max);
+	// char	buff1[13] = "strlcat ";
+	// char	buff2[13] = "strlcat ";
+	// char	*src = "test";
+	// size_t	max = strlen(src) + strlen(buff1);
+	// printf("dest: %zu\n", ft_strlen(buff1));
+	// printf("src: %zu\n", ft_strlen(src));
+	// printf("dest + src: %zu\n", max);
+	// printf("%zu\n", ft_strlcat(buff1, src, 13));
+	// printf("%zu\n", ft_strlcat(buff2, src, 13));
 	// printf("%s\n", buff1);
 	// printf("%s\n", buff2);
-
 
 
 ////////////////////////////////
@@ -311,7 +311,7 @@
 	// c = 'Z';
 	// printf("%c\n", tolower(c));
 	// printf("%c\n", ft_tolower(c));
-// }
+}
 
 ////////////////////////////////
 //         ft_strmapi         //
@@ -590,57 +590,8 @@
 // 	printf("%s\n", ft_lstlast(l)->content);
 // }
 
-
-
-
-
-
-
-
-
-
-	// // lstadd_front start
-	// t_list *l;
-    // t_list *n = ft_lstnew(strdup("OK"));
-	// ft_lstadd_front(&l, n);
-	// printf("%s\n", l->content);
-	// // lstadd_front end
-
-	// // lstsize start
-	// t_list *l;
-
-	// l = ft_lstnew(ft_strdup("1"));
-	// l->next = ft_lstnew(ft_strdup("2"));
-	// l->next->next = ft_lstnew(ft_strdup("3"));
-	// printf("%d\n", ft_lstsize(l));
-	// // lstsize end
-
-	// // lstlast start
-	// t_list	*l;
-
-	// l = ft_lstnew(ft_strdup("1"));
-	// l->next = ft_lstnew(ft_strdup("2"));
-	// l->next->next = ft_lstnew(ft_strdup("3"));
-	// printf("%s\n", ft_lstlast(l)->content);
-	// // lstlast end
-
-	// lstadd_back start
-	// t_list *l = ((void *)0);
-	// t_list *n = ft_lstnew(ft_strdup("OK"));
-
-	// ft_lstadd_back(&l, n);
-	// if (l == n && !ft_strncmp(l->content, "OK", 2))
-	// {
-	// 	free(l->next);
-	// 	free(l);
-	// 	printf("%s\n", "GOOD!");
-	// }
-	// else
-	// 	printf("%s\n", "BAD...");
-	// lstadd_back end
-
+// ここからは自分の確認用。レビューでは不要
 // // lstdelone start
-// #include <stdio.h>
 
 // void	delete(void *p)
 // {
