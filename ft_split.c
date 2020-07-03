@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 17:04:52 by monoue            #+#    #+#             */
-/*   Updated: 2020/07/02 14:32:07 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/03 20:16:28 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int		ft_count_words(char *str, char c)
 static size_t	set_start(size_t start, size_t end, char const *s, char c)
 {
 	start = end;
-	while (start < ft_strlen(s) && s[start] == c)
+	while (start < ft_strlen(s) && s[start] == c && s[start] != '\0')
 		start++;
 	return (start);
 }
@@ -46,7 +46,7 @@ static size_t	set_end(size_t start, size_t end, char const *s, char c)
 	return (end);
 }
 
-void			free_all(char **arr, size_t i)
+static void		free_all(char **arr, size_t i)
 {
 	while (i >= 0)
 		free(arr[i--]);
@@ -64,11 +64,12 @@ char			**ft_split(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	count = ft_count_words((char *)s, c);
-	if (!(arr = malloc((count + 1) * sizeof(*arr))))
+	if (!(arr = ft_calloc((count + 1), sizeof(*arr))))
 		return (NULL);
-	start = 0;
-	while ((s[start] != '\0' && s[start] == c) || (i = 0))
-		start++;
+	if (c == '\0')
+		return (arr);
+	i = 0;
+	start = set_start(0, 0, s, c);
 	while (count-- > 0 && (end = set_end(start, end, s, c)))
 	{
 		if (!(arr[i++] = ft_substr(s, start, end - start)))
@@ -78,6 +79,5 @@ char			**ft_split(char const *s, char c)
 		}
 		start = set_start(start, end, s, c);
 	}
-	arr[i] = NULL;
 	return (arr);
 }
