@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 17:04:52 by monoue            #+#    #+#             */
-/*   Updated: 2020/07/03 20:16:28 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/09 13:37:31 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,11 @@ static size_t	set_end(size_t start, size_t end, char const *s, char c)
 
 static void		free_all(char **arr, size_t i)
 {
-	while (i >= 0)
-		free(arr[i--]);
+	int	j;
+
+	j = (int)i;
+	while (j >= 0)
+		free(arr[j--]);
 	free(arr);
 }
 

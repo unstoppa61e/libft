@@ -5,9 +5,10 @@ PART2 =
 BONUS =
 ADDED =
 SRCS = $(PART1) $(PART2) $(ADDED)
-OBJS = $(SRCS:.c=.o)
-BOBJS = $(BONUS:.c=.o)
-FLAGS = -Wall -Wextra -Werror
+OBJS	= $(SRCS:%.c=%.o)
+BOBJS	= $(BONUS:%.c=%.o)
+CLIBS	= -L . -lft
+CFLAGS = -Wall -Wextra -Werror
 
 PART1 += ft_memset.c
 PART1 += ft_bzero.c
@@ -22,7 +23,6 @@ PART1 += ft_strlcat.c
 PART1 += ft_strchr.c
 PART1 += ft_strrchr.c
 PART1 += ft_strnstr.c
-
 PART1 += ft_strncmp.c
 PART1 += ft_atoi.c
 PART1 += ft_isalpha.c
@@ -63,22 +63,22 @@ ADDED += ft_itoc.c
 ADDED += ft_isspace.c
 ADDED += ft_strnlen.c
 
-$(NAME):
-	$(CC) -c $(FLAGS) $(SRCS) -I libft.h
-	ar rcs $(NAME) $(OBJS)
-
 all: $(NAME)
 
+$(NAME): $(OBJS)
+	ar rc $(NAME) $(OBJS)
+
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BOBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-bonus:
-	$(CC) -c $(FLAGS) $(SRCS) $(BONUS) -I libft.h
-	ar rcs $(NAME) $(OBJS) $(BOBJS)
+$(BOBJS): $(OBJS)
+
+bonus: $(BOBJS)
+	ar rc $(NAME) $(OBJS) $(BOBJS)
 
 .PHONY: all clean fclean re bonus
