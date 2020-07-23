@@ -63,6 +63,9 @@ ADDED += ft_itoc.c
 ADDED += ft_isspace.c
 ADDED += ft_strnlen.c
 ADDED += ft_strstr.c
+ADDED += ft_putchar.c
+ADDED += ft_putnbr.c
+ADDED += ft_intlen.c
 
 all: $(NAME)
 

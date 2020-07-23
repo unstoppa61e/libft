@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:56:31 by monoue            #+#    #+#             */
-/*   Updated: 2020/07/23 12:29:15 by monoue           ###   ########.fr       */
+/*   Updated: 2020/07/23 15:48:37 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <limits.h>
+# include <stdarg.h>
 
 typedef struct		s_list
 {
@@ -76,4 +77,8 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 void (*del)(void *));
 char				*ft_strstr(const char *haystack, const char *needle);
+void				ft_putchar(char c);
+void				ft_putnbr(int n);
+size_t				ft_intlen(int n);
+
 #endif
