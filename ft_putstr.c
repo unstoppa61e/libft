@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/29 15:24:38 by monoue            #+#    #+#             */
-/*   Updated: 2020/08/17 08:41:11 by monoue           ###   ########.fr       */
+/*   Created: 2020/06/29 16:14:14 by monoue            #+#    #+#             */
+/*   Updated: 2020/08/17 08:45:20 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+void	ft_putstr(char *s)
 {
-	write(STDOUT_FILENO, &c, 1);
+	write(STDOUT_FILENO, s, ft_strlen(s));
 }
