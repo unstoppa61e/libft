@@ -6,15 +6,15 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:21:27 by monoue            #+#    #+#             */
-/*   Updated: 2020/07/02 11:21:29 by monoue           ###   ########.fr       */
+/*   Updated: 2020/08/17 08:17:43 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+bool	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+		return (true);
+	return (false);
 }

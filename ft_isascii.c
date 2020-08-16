@@ -6,15 +6,15 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:19:50 by monoue            #+#    #+#             */
-/*   Updated: 2020/07/02 11:19:53 by monoue           ###   ########.fr       */
+/*   Updated: 2020/08/17 08:17:32 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int n)
+bool	ft_isascii(int n)
 {
 	if (n >= 0 && n <= 127)
-		return (1);
-	return (0);
+		return (true);
+	return (false);
 }

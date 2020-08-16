@@ -6,15 +6,15 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:19:26 by monoue            #+#    #+#             */
-/*   Updated: 2020/07/06 16:36:25 by monoue           ###   ########.fr       */
+/*   Updated: 2020/08/17 08:17:15 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+bool	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+		return (true);
+	return (false);
 }

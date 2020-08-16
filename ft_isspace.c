@@ -6,13 +6,15 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/25 16:36:26 by monoue            #+#    #+#             */
-/*   Updated: 2020/07/02 11:21:58 by monoue           ###   ########.fr       */
+/*   Updated: 2020/08/17 08:18:28 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(char c)
+#include "libft.h"
+
+bool	ft_isspace(char c)
 {
 	if ((c >= '\t' && c <= '\r') || c == ' ')
-		return (1);
-	return (0);
+		return (true);
+	return (false);
 }
