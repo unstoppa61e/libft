@@ -66,6 +66,7 @@ ADDED += ft_strstr.c
 ADDED += ft_putchar.c
 ADDED += ft_putnbr.c
 ADDED += ft_intlen.c
+ADDED += ft_strjoin_free_both.c
 
 all: $(NAME)
 

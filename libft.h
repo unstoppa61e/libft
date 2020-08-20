@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:56:31 by monoue            #+#    #+#             */
-/*   Updated: 2020/08/17 08:45:40 by monoue           ###   ########.fr       */
+/*   Updated: 2020/08/20 10:37:54 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@
 # include <limits.h>
 # include <stdarg.h>
 # include <stdbool.h>
+
+# define MIN(x, y)		x <= y ? x : y
+# define CTOI(c)		c - '0'
+# define ERROR			-1
+# define NOT_SET		-1
+# define SAFE_FREE(ptr)	{free(ptr);ptr = NULL;}
 
 typedef struct		s_list
 {
@@ -35,7 +41,7 @@ bool				ft_isspace(char c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_atoi(const char *str);
-char				*ft_strdup(const char *s1);
+char				*ft_strdup(const char *original_s);
 size_t				ft_strlen(const char *str);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -82,5 +88,6 @@ void				ft_putchar(char c);
 void				ft_putstr(char *s);
 void				ft_putnbr(int n);
 size_t				ft_intlen(int n);
+char				*ft_strjoin_free_both(char const *s1, char const *s2);
 
 #endif
