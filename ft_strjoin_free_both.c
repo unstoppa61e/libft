@@ -6,11 +6,11 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/20 10:37:04 by monoue            #+#    #+#             */
-/*   Updated: 2020/08/20 10:58:03 by monoue           ###   ########.fr       */
+/*   Updated: 2020/08/25 16:53:55 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strjoin_free_both(char *s1, char *s2)
 {
