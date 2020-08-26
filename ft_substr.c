@@ -6,13 +6,13 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 13:48:12 by monoue            #+#    #+#             */
-/*   Updated: 2020/08/26 09:32:13 by monoue           ###   ########.fr       */
+/*   Updated: 2020/08/26 09:37:55 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *original_s, unsigned int start, size_t len)
+char	*ft_substr(char const *original_s, unsigned int start, size_t cut_len)
 {
 	char	*sub_s;
 	size_t	srclen;
