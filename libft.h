@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:56:31 by monoue            #+#    #+#             */
-/*   Updated: 2020/08/20 10:58:18 by monoue           ###   ########.fr       */
+/*   Updated: 2020/10/14 15:40:48 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,6 @@ void				ft_putstr(char *s);
 void				ft_putnbr(int n);
 size_t				ft_intlen(int n);
 char				*ft_strjoin_free_both(char *s1, char *s2);
+int					ft_strcmp(const char *s1, const char *s2);
 
 #endif
