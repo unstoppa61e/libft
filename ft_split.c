@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 17:04:52 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/15 14:44:00 by monoue           ###   ########.fr       */
+/*   Updated: 2020/10/15 15:33:58 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,15 @@ static size_t	count_words(char *str, char c)
 	return (words_num);
 }
 
-static char		**return_null_freeing_all(char **arr, int w_i)
+static char		**return_null_freeing_all(char **arr, int i)
 {
-	int	j;
+	int	index;
 
-	j = w_i;
-	while (j >= 0)
+	index = i;
+	while (index >= 0)
 	{
-		SAFE_FREE(arr[j]);
-		j--;
+		SAFE_FREE(arr[index]);
+		index--;
 	}
 	SAFE_FREE(arr);
 	return (NULL);
@@ -63,8 +63,8 @@ char			**ft_split(char const *str, char sep_c)
 {
 	char	**words;
 	size_t	words_num;
-	int		w_i;
 	size_t	index;
+	int		w_i;
 
 	if (str == NULL)
 		return (NULL);
