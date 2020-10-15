@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 16:23:14 by monoue            #+#    #+#             */
-/*   Updated: 2020/07/02 11:38:22 by monoue           ###   ########.fr       */
+/*   Updated: 2020/10/15 15:02:41 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 		d *= 10;
 	while (d)
 	{
-		ft_putchar_fd(ft_itoc(n2 / d), fd);
+		ft_putchar_fd(ITOC(n2 / d), fd);
 		n2 %= d;
 		d /= 10;
 	}
