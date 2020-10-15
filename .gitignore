@@ -3,5 +3,7 @@
 *.out
 *.dSYM
 test.c
+tmp.c
 example.c
+gitignored.c
 includes

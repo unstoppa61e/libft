@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 16:23:14 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/15 15:02:41 by monoue           ###   ########.fr       */
+/*   Updated: 2020/10/15 15:36:35 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long	n2;
-	long	d;
+	long	num;
+	long	digit;
 
-	n2 = (long)n;
-	d = 1;
-	if (n2 < 0)
+	num = (long)n;
+	digit = 1;
+	if (num < 0)
 	{
 		ft_putchar_fd('-', fd);
-		n2 *= -1;
+		num *= -1;
 	}
-	while (n2 >= 10 * d)
-		d *= 10;
-	while (d)
+	while (digit * 10 <= num)
+		digit *= 10;
+	while (digit)
 	{
-		ft_putchar_fd(ITOC(n2 / d), fd);
-		n2 %= d;
-		d /= 10;
+		ft_putchar_fd(ITOC(num / digit), fd);
+		num %= digit;
+		digit /= 10;
 	}
 }
