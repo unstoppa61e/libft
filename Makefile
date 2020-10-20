@@ -65,6 +65,7 @@ ADDED += ft_intlen.c
 ADDED += ft_strjoin_free_both.c
 ADDED += ft_strcmp.c
 ADDED += ft_strdup_free.c
+ADDED += ctoa.c
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
