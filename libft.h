@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:56:31 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/20 09:26:17 by monoue           ###   ########.fr       */
+/*   Updated: 2020/10/22 10:41:37 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,9 @@ size_t				ft_intlen(int n);
 char				*ft_strjoin_free_both(char *s1, char *s2);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strdup_free(char *original_s);
-char				*ctoa(char c);
-char				*xtoa(unsigned num);
+char				*ft_ctoa(char c);
+char				*ft_xtoa(unsigned num);
+bool				ft_str_is_numeric(const char *str);
+size_t				ft_count_strs(const char **strs);
 
 #endif

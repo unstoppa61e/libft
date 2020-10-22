@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ctoa.c                                             :+:      :+:    :+:   */
+/*   ft_count_strs.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/20 07:20:40 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/20 07:20:43 by monoue           ###   ########.fr       */
+/*   Created: 2020/10/22 10:26:29 by monoue            #+#    #+#             */
+/*   Updated: 2020/10/22 10:27:09 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ctoa(char c)
+size_t	ft_count_strs(const char **strs)
 {
-	char	*c_as_str;
+	size_t	count;
 
-	c_as_str = ft_strdup("0");
-	if (c_as_str == NULL)
-		return (NULL);
-	c_as_str[0] = c;
-	return (c_as_str);
+	count = 0;
+	while (strs[count] != NULL)
+		count++;
+	return (count);
 }

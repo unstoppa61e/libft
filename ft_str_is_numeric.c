@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   xtoa.c                                             :+:      :+:    :+:   */
+/*   ft_isdigit_str.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/20 07:22:04 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/20 07:23:56 by monoue           ###   ########.fr       */
+/*   Created: 2020/10/22 10:27:33 by monoue            #+#    #+#             */
+/*   Updated: 2020/10/22 10:41:37 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*xtoa(unsigned num)
+bool	ft_str_is_numeric(const char *str)
 {
-	if (num >= 16)
-		return (ft_strjoin_free_both(xtoa(num / 16), xtoa(num % 16)));
-	return (ctoa("0123456789abcdef"[num]));
+	size_t	index;
+
+	index = 0;
+	while (str[index] != '\0' && ft_isdigit(str[index]))
+		index++;
+	return (index == ft_strlen(str));
 }
