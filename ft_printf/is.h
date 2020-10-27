@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   is.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/29 11:39:21 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/27 12:37:22 by monoue           ###   ########.fr       */
+/*   Created: 2020/10/27 13:18:28 by monoue            #+#    #+#             */
+/*   Updated: 2020/10/27 13:18:29 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef IS_H
+# define IS_H
 
-char	*ft_itoa(long num)
-{
-	if (num < 0)
-		return (ft_strjoin_free_both(ft_ctoa('-'), ft_itoa(-num)));
-	if (num >= 10)
-		return (ft_strjoin_free_both(ft_itoa(num / 10), ft_itoa(num % 10)));
-	return (ft_ctoa((char)ITOC(num)));
-}
+# include <stdbool.h>
+# include <stdarg.h>
+
+bool	is_of_chars(const unsigned int c, int argc, ...);
+bool	isconversion_c(const unsigned int c);
+
+#endif

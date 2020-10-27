@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   set_zero_minwidth_minus_prec.h                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/29 11:39:21 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/27 12:37:22 by monoue           ###   ########.fr       */
+/*   Created: 2020/10/27 13:47:06 by monoue            #+#    #+#             */
+/*   Updated: 2020/10/27 14:24:46 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef SET_ZERO_MINWIDTH_MINUS_PREC_H
+# define SET_ZERO_MINWIDTH_MINUS_PREC_H
 
-char	*ft_itoa(long num)
-{
-	if (num < 0)
-		return (ft_strjoin_free_both(ft_ctoa('-'), ft_itoa(-num)));
-	if (num >= 10)
-		return (ft_strjoin_free_both(ft_itoa(num / 10), ft_itoa(num % 10)));
-	return (ft_ctoa((char)ITOC(num)));
-}
+# include "../libft.h"
+# include "defs.h"
+
+void	set_zero_minwidth_minus_prec(char *target, int *index,
+														t_format_info *info);
+
+#endif

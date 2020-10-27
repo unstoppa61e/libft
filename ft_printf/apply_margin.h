@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   apply_margin.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/29 11:39:21 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/27 12:37:22 by monoue           ###   ########.fr       */
+/*   Created: 2020/10/27 13:18:17 by monoue            #+#    #+#             */
+/*   Updated: 2020/10/27 14:03:51 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef APPLY_MARGIN_H
+# define APPLY_MARGIN_H
 
-char	*ft_itoa(long num)
-{
-	if (num < 0)
-		return (ft_strjoin_free_both(ft_ctoa('-'), ft_itoa(-num)));
-	if (num >= 10)
-		return (ft_strjoin_free_both(ft_itoa(num / 10), ft_itoa(num % 10)));
-	return (ft_ctoa((char)ITOC(num)));
-}
+# include "../libft.h"
+# include "defs.h"
+
+void	apply_margin(char **new_target, int empty_width, t_format_info *info);
+
+#endif

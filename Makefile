@@ -4,7 +4,8 @@ PART1 =
 PART2 =
 BONUS =
 ADDED =
-SRCS =		$(PART1) $(PART2) $(BONUS) $(ADDED)
+FT_PRINTF =
+SRCS =		$(PART1) $(PART2) $(BONUS) $(ADDED) $(FT_PRINTF)
 OBJS =		$(SRCS:%.c=%.o)
 CLIBS =		-L . -lft
 CFLAGS =	-Wall -Wextra -Werror
@@ -67,10 +68,21 @@ ADDED += ft_strcmp.c
 ADDED += ft_strdup_free.c
 ADDED += ft_ctoa.c
 ADDED += ft_xtoa.c
+ADDED += ft_utoa.c
 ADDED += ft_count_strs.c
 ADDED += ft_str_is_numeric.c
 ADDED += ft_strcpy.c
 ADDED += get_next_line.c
+
+FT_PRINTF += ./ft_printf/apply_margin.c
+FT_PRINTF += ./ft_printf/cut_out_format.c
+FT_PRINTF += ./ft_printf/fill_with_zero.c
+FT_PRINTF += ./ft_printf/ft_printf.c
+FT_PRINTF += ./ft_printf/ft_xtoa_printf.c
+FT_PRINTF += ./ft_printf/init_format_info.c
+FT_PRINTF += ./ft_printf/is.c
+FT_PRINTF += ./ft_printf/put_result.c
+FT_PRINTF += ./ft_printf/set_zero_minwidth_minus_prec.c
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)

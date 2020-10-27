@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   init_format_info.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/29 11:39:21 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/27 12:37:22 by monoue           ###   ########.fr       */
+/*   Created: 2020/08/20 12:52:06 by monoue            #+#    #+#             */
+/*   Updated: 2020/10/27 13:49:07 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "init_format_info.h"
 
-char	*ft_itoa(long num)
+void	init_format_info(t_format_info *info)
 {
-	if (num < 0)
-		return (ft_strjoin_free_both(ft_ctoa('-'), ft_itoa(-num)));
-	if (num >= 10)
-		return (ft_strjoin_free_both(ft_itoa(num / 10), ft_itoa(num % 10)));
-	return (ft_ctoa((char)ITOC(num)));
+	info->min_width = NOT_SET;
+	info->minus = false;
+	info->zero = false;
+	info->precision = NOT_SET;
+	info->c_null = false;
+	info->value = NULL;
 }

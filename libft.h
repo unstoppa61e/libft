@@ -6,23 +6,23 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:56:31 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/27 12:26:00 by monoue           ###   ########.fr       */
+/*   Updated: 2020/10/27 14:19:15 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdio.h>
+
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 # include <string.h>
 # include <limits.h>
-# include <stdarg.h>
 # include <stdbool.h>
-# include <errno.h>
 
 # include "get_next_line.h"
+# include "./ft_printf/ft_printf.h"
 
 # define INT_MIN_STR "-2147483648"
 # define MIN(x, y)		x <= y ? x : y
@@ -70,7 +70,7 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *str, char sep_c);
-char				*ft_itoa(int num);
+char				*ft_itoa(long num);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
@@ -86,18 +86,19 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 														void (*del)(void *));
-char				*ft_strstr(const char *haystack, const char *needle);
+size_t				ft_count_strs(const char **strs);
+size_t				ft_intlen(int n);
 void				ft_putchar(char c);
 void				ft_putstr(char *s);
 void				ft_putnbr(int n);
-size_t				ft_intlen(int n);
+bool				ft_str_is_numeric(const char *str);
 char				*ft_strjoin_free_both(char *s1, char *s2);
 int					ft_strcmp(const char *s1, const char *s2);
-char				*ft_strdup_free(char *original_s);
-char				*ft_ctoa(char c);
-char				*ft_xtoa(unsigned num);
-bool				ft_str_is_numeric(const char *str);
-size_t				ft_count_strs(const char **strs);
 char				*ft_strcpy(char *dst, const char *src);
+char				*ft_strdup_free(char *original_s);
+char				*ft_strstr(const char *haystack, const char *needle);
+char				*ft_ctoa(char c);
+char				*ft_utoa(unsigned int num);
+char				*ft_xtoa(unsigned num);
 
 #endif

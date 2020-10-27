@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   cut_out_format.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/29 11:39:21 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/27 12:37:22 by monoue           ###   ########.fr       */
+/*   Created: 2020/10/27 13:55:27 by monoue            #+#    #+#             */
+/*   Updated: 2020/10/27 14:04:21 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef CUT_OUT_FORMAT_H
+# define CUT_OUT_FORMAT_H
 
-char	*ft_itoa(long num)
-{
-	if (num < 0)
-		return (ft_strjoin_free_both(ft_ctoa('-'), ft_itoa(-num)));
-	if (num >= 10)
-		return (ft_strjoin_free_both(ft_itoa(num / 10), ft_itoa(num % 10)));
-	return (ft_ctoa((char)ITOC(num)));
-}
+# include <stdarg.h>
+
+# include "../libft.h"
+# include "is.h"
+
+char			*cut_out_format(const char **format, va_list *ap);
+
+#endif
