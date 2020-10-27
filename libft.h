@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:56:31 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/22 10:41:37 by monoue           ###   ########.fr       */
+/*   Updated: 2020/10/27 12:13:34 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 
 # define INT_MIN_STR "-2147483648"
 # define MIN(x, y)		x <= y ? x : y
+# define MAX(x, y)		x >= y ? x : y
 # define CTOI(c)		c - '0'
 # define ITOC(c)		c + '0'
 # define ERROR			-1
@@ -93,5 +94,6 @@ char				*ft_ctoa(char c);
 char				*ft_xtoa(unsigned num);
 bool				ft_str_is_numeric(const char *str);
 size_t				ft_count_strs(const char **strs);
+char				*strcpy(char *dst, const char *src);
 
 #endif
