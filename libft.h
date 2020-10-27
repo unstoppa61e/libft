@@ -6,12 +6,13 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:56:31 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/27 12:13:34 by monoue           ###   ########.fr       */
+/*   Updated: 2020/10/27 12:26:00 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
@@ -19,6 +20,9 @@
 # include <limits.h>
 # include <stdarg.h>
 # include <stdbool.h>
+# include <errno.h>
+
+# include "get_next_line.h"
 
 # define INT_MIN_STR "-2147483648"
 # define MIN(x, y)		x <= y ? x : y
@@ -94,6 +98,6 @@ char				*ft_ctoa(char c);
 char				*ft_xtoa(unsigned num);
 bool				ft_str_is_numeric(const char *str);
 size_t				ft_count_strs(const char **strs);
-char				*strcpy(char *dst, const char *src);
+char				*ft_strcpy(char *dst, const char *src);
 
 #endif

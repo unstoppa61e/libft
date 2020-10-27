@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: monoue <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/27 11:50:23 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/27 12:25:26 by monoue           ###   ########.fr       */
+/*   Created: 2020/07/10 15:05:47 by monoue            #+#    #+#             */
+/*   Updated: 2020/10/27 12:26:36 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-char	*ft_strcpy(char *dst, const char *src)
-{
-	size_t	index;
+# include "libft.h"
 
-	index = 0;
-	while (src[index] != '\0')
-	{
-		dst[index] = src[index];
-		index++;
-	}
-	dst[index] = '\0';
-	return (dst);
-}
+# define MAX_FD			256
+# define NOT_EOF		1
+# define FILE_END		0
+# define NOT_FOUND		-1
+# define BUFFER_SIZE	1024
+
+int		get_next_line(int fd, char **line);
+
+#endif
