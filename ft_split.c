@@ -6,27 +6,27 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 17:04:52 by monoue            #+#    #+#             */
-/*   Updated: 2021/01/20 14:25:52 by monoue           ###   ########.fr       */
+/*   Updated: 2021/01/20 14:29:02 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	count_words(char const *str, char c)
+static size_t	count_words(char const *str, char sep_c)
 {
 	size_t	index;
 	size_t	words_num;
 
 	index = 0;
-	while (str[index] != '\0' && str[index] == c)
+	while (str[index] != '\0' && str[index] == sep_c)
 		index++;
 	words_num = 0;
 	while (str[index] != '\0')
 	{
-		while (str[index] != '\0' && str[index] != c)
+		while (str[index] != '\0' && str[index] != sep_c)
 			index++;
 		words_num++;
-		while (str[index] != '\0' && str[index] == c)
+		while (str[index] != '\0' && str[index] == sep_c)
 			index++;
 	}
 	return (words_num);
