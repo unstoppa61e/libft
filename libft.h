@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:56:31 by monoue            #+#    #+#             */
-/*   Updated: 2021/01/20 14:54:22 by monoue           ###   ########.fr       */
+/*   Updated: 2021/01/21 06:24:11 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,6 @@ char				*ft_utoa(unsigned int num);
 char				*ft_xtoa(unsigned num);
 void				ft_putendl(char *s);
 char				ft_itoc(int n);
+bool				ft_strequal(const char *s1, const char *s);
 
 #endif
