@@ -67,6 +67,7 @@ ADDED += ft_intlen.c
 ADDED += ft_strjoin_free_both.c
 ADDED += ft_strcmp.c
 ADDED += ft_strdup_free.c
+ADDED += ft_itoc.c
 ADDED += ft_ctoa.c
 ADDED += ft_xtoa.c
 ADDED += ft_utoa.c
