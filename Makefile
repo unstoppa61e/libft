@@ -6,9 +6,10 @@ BONUS =
 ADDED =
 FT_PRINTF =
 SRCS =		$(PART1) $(PART2) $(BONUS) $(ADDED) $(FT_PRINTF)
-OBJS =		$(SRCS:%.c=%.o)
-CLIBS =		-L . -lft
 CFLAGS =	-Wall -Wextra -Werror
+INCLUDE = libft.h
+
+FT_PRINTF_PATH = ft_printf/
 
 PART1 += ft_memset.c
 PART1 += ft_bzero.c
@@ -74,26 +75,32 @@ ADDED += ft_str_is_numeric.c
 ADDED += ft_strcpy.c
 ADDED += get_next_line.c
 
-FT_PRINTF += ./ft_printf/apply_margin.c
-FT_PRINTF += ./ft_printf/cut_out_format.c
-FT_PRINTF += ./ft_printf/fill_with_zero.c
-FT_PRINTF += ./ft_printf/ft_printf.c
-FT_PRINTF += ./ft_printf/ft_xtoa_printf.c
-FT_PRINTF += ./ft_printf/init_format_info.c
-FT_PRINTF += ./ft_printf/is.c
-FT_PRINTF += ./ft_printf/put_result.c
-FT_PRINTF += ./ft_printf/set_zero_minwidth_minus_prec.c
+FT_PRINTF += $(FT_PRINTF_PATH)apply_margin.c
+FT_PRINTF += $(FT_PRINTF_PATH)cut_out_format.c
+FT_PRINTF += $(FT_PRINTF_PATH)fill_with_zero.c
+FT_PRINTF += $(FT_PRINTF_PATH)ft_printf.c
+FT_PRINTF += $(FT_PRINTF_PATH)ft_xtoa_printf.c
+FT_PRINTF += $(FT_PRINTF_PATH)init_format_info.c
+FT_PRINTF += $(FT_PRINTF_PATH)is.c
+FT_PRINTF += $(FT_PRINTF_PATH)put_result.c
+FT_PRINTF += $(FT_PRINTF_PATH)set_zero_minwidth_minus_prec.c
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+OBJS =		$(SRCS:%.c=%.o)
 
 all: $(NAME)
 
+%.o:%.c
+	$(CC) $(CFLAGS) -I./$(INCLUDE) -o $@ -c $<
+
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
+	ranlib $(NAME)
+
 clean:
-	rm -f $(OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 

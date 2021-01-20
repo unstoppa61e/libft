@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 17:08:07 by monoue            #+#    #+#             */
-/*   Updated: 2020/07/02 11:24:33 by monoue           ###   ########.fr       */
+/*   Updated: 2021/01/20 12:47:00 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,10 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*l;
-
-	if (!lst)
+	if (!lst || !new)
 		return ;
-	l = *lst;
 	if (!(*lst))
 		*lst = new;
 	else
-	{
-		l = ft_lstlast(l);
-		l->next = new;
-	}
+		ft_lstlast(*lst)->next = new;
 }
