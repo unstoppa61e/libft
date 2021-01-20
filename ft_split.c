@@ -6,13 +6,13 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 17:04:52 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/15 15:33:58 by monoue           ###   ########.fr       */
+/*   Updated: 2021/01/20 14:25:52 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	count_words(char *str, char c)
+static size_t	count_words(char const *str, char c)
 {
 	size_t	index;
 	size_t	words_num;
@@ -68,7 +68,7 @@ char			**ft_split(char const *str, char sep_c)
 
 	if (str == NULL)
 		return (NULL);
-	words_num = count_words((char *)str, sep_c);
+	words_num = count_words(str, sep_c);
 	words = ft_calloc((words_num + 1), sizeof(*words));
 	if (words == NULL)
 		return (NULL);
