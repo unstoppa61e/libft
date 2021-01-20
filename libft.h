@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:56:31 by monoue            #+#    #+#             */
-/*   Updated: 2021/01/21 06:46:23 by monoue           ###   ########.fr       */
+/*   Updated: 2021/01/21 07:48:42 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,5 +104,6 @@ void				ft_putendl(char *s);
 char				ft_itoc(int n);
 bool				ft_strequal(const char *s1, const char *s);
 void				ft_free_split(char **strs);
+void				ft_putstr_err(char *s);
 
 #endif

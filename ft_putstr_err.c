@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr_err.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/27 13:27:33 by monoue            #+#    #+#             */
-/*   Updated: 2021/01/21 07:50:00 by monoue           ###   ########.fr       */
+/*   Created: 2021/01/21 07:48:49 by monoue            #+#    #+#             */
+/*   Updated: 2021/01/21 07:49:33 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-int	ft_printf(const char *format, ...);
-int	ft_dprintf(int fd, const char *format, ...);
-
-#endif
+void				ft_putstr_err(char *s)
+{
+	write(STDERR_FILENO, s, ft_strlen(s));
+}

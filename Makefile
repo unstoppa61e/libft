@@ -77,6 +77,7 @@ ADDED += ft_strcpy.c
 ADDED += get_next_line.c
 ADDED += ft_strequal.c
 ADDED += ft_free_split.c
+ADDED += ft_putstr_err.c
 
 FT_PRINTF += $(FT_PRINTF_PATH)apply_margin.c
 FT_PRINTF += $(FT_PRINTF_PATH)cut_out_format.c
