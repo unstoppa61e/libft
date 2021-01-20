@@ -80,10 +80,12 @@ FT_PRINTF += $(FT_PRINTF_PATH)apply_margin.c
 FT_PRINTF += $(FT_PRINTF_PATH)cut_out_format.c
 FT_PRINTF += $(FT_PRINTF_PATH)fill_with_zero.c
 FT_PRINTF += $(FT_PRINTF_PATH)ft_printf.c
+FT_PRINTF += $(FT_PRINTF_PATH)ft_dprintf.c
 FT_PRINTF += $(FT_PRINTF_PATH)ft_xtoa_printf.c
 FT_PRINTF += $(FT_PRINTF_PATH)init_format_info.c
 FT_PRINTF += $(FT_PRINTF_PATH)is.c
 FT_PRINTF += $(FT_PRINTF_PATH)put_result.c
+FT_PRINTF += $(FT_PRINTF_PATH)put_result_fd.c
 FT_PRINTF += $(FT_PRINTF_PATH)set_zero_minwidth_minus_prec.c
 
 OBJS =		$(SRCS:%.c=%.o)
