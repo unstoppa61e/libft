@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:56:31 by monoue            #+#    #+#             */
-/*   Updated: 2021/01/21 07:48:42 by monoue           ###   ########.fr       */
+/*   Updated: 2021/01/21 16:04:03 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,26 @@
 # define ERROR			-1
 # define NOT_SET		-1
 # define SAFE_FREE(ptr)	{free(ptr);ptr = NULL;}
+
+# define ESC		"\033"
+# define RED_S		ESC"[31:1m"
+# define GREEN_S	ESC"[32:1m"
+# define YELLOW_S	ESC"[33:1m"
+# define BLUE_S		ESC"[34:1m"
+# define PURPLE_S	ESC"[35:1m"
+# define CYAN_S		ESC"[36:1m"
+# define RESET		ESC"[m"
+
+typedef enum	e_colors{
+	RED_N,
+	GREEN_N,
+	YELLOW_N,
+	BLUE_N,
+	PURPLE_N,
+	CYAN_N,
+
+	COLORS_NUM
+}				t_colors;
 
 typedef struct		s_list
 {
@@ -105,5 +125,6 @@ char				ft_itoc(int n);
 bool				ft_strequal(const char *s1, const char *s);
 void				ft_free_split(char **strs);
 void				ft_putstr_err(char *s);
+void				put_color_fd(const char *str, t_colors color, int fd);
 
 #endif
