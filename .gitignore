@@ -10,3 +10,4 @@ gitignored.c
 includes
 .DS_Store
 .vscode
+*.swp
