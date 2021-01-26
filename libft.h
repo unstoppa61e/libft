@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:56:31 by monoue            #+#    #+#             */
-/*   Updated: 2021/01/27 07:27:09 by monoue           ###   ########.fr       */
+/*   Updated: 2021/01/27 07:33:19 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,5 +127,6 @@ void				ft_free_split(char **strs);
 void				ft_putstr_err(char *s);
 void				put_color_fd(const char *str, t_colors color, int fd);
 char				*strncpy(char *dst, const char *src, size_t len);
+bool				ft_strnequal(const char *s1, const char *s2, size_t n);
 
 #endif
