@@ -6,13 +6,13 @@
 /*   By: monoue <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 07:16:04 by monoue            #+#    #+#             */
-/*   Updated: 2021/01/27 07:19:30 by monoue           ###   ########.fr       */
+/*   Updated: 2021/01/27 09:01:17 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strncpy(char *dst, const char *src, size_t len)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	size_t	index;
 
