@@ -81,6 +81,7 @@ ADDED += ft_putstr_err.c
 ADDED += put_color_fd.c
 ADDED += ft_strncpy.c
 ADDED += ft_strnequal.c
+ADDED += ft_putendl.c
 
 FT_PRINTF += $(FT_PRINTF_PATH)apply_margin.c
 FT_PRINTF += $(FT_PRINTF_PATH)cut_out_format.c
