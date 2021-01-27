@@ -6,11 +6,11 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 07:51:48 by monoue            #+#    #+#             */
-/*   Updated: 2021/01/21 07:53:03 by monoue           ###   ########.fr       */
+/*   Updated: 2021/01/27 09:08:16 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putendl(char *s)
+void	ft_putendl(const char *s)
 {
 	ft_putstr(s);
 	ft_putchar('\n');

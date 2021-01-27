@@ -6,13 +6,13 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 16:14:14 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/20 09:52:08 by monoue           ###   ########.fr       */
+/*   Updated: 2021/01/27 09:09:42 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(const char *s, int fd)
 {
 	if (s == NULL)
 		return ;
