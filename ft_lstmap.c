@@ -6,32 +6,34 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 14:16:21 by monoue            #+#    #+#             */
-/*   Updated: 2020/07/03 14:58:04 by monoue           ###   ########.fr       */
+/*   Updated: 2021/02/08 09:58:19 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *src, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*l;
-	t_list	*newl;
-	t_list	*new_start;
+	t_list	*src_copy;
+	t_list	*dst;
+	t_list	*tmp;
 
-	if (!lst || !f)
+	if (!src || !f)
 		return (NULL);
-	l = lst;
-	newl = ft_lstnew(f(l->content));
-	if (newl == NULL)
+	dst = ft_lstnew(f(src->content));
+	if (!dst)
 		return (NULL);
-	new_start = newl;
-	while (l->next)
+	src_copy = src->next;
+	while (src_copy)
 	{
-		l = l->next;
-		newl->next = ft_lstnew(f(l->content));
-		if (newl->next == NULL)
-			ft_lstclear(&lst, del);
-		newl = newl->next;
+		tmp = ft_lstnew(f(src_copy->content));
+		if (!tmp)
+		{
+			ft_lstclear(dst, del);
+			return (NULL);
+		}
+		ft_lstadd_back(dst, tmp);
+		src_copy = src_copy->next;
 	}
-	return (new_start);
+	return (dst);
 }
