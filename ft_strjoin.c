@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 16:01:19 by monoue            #+#    #+#             */
-/*   Updated: 2021/01/20 14:31:15 by monoue           ###   ########.fr       */
+/*   Updated: 2021/02/08 10:24:25 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	ret_s = malloc(sizeof(char) * (s1_len + s2_len + 1));
+	ret_s = malloc((s1_len + s2_len + 1) * sizeof(char));
 	if (!ret_s)
 		return (NULL);
 	ft_strcpy(ret_s, s1);

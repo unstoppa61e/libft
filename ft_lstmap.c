@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 14:16:21 by monoue            #+#    #+#             */
-/*   Updated: 2021/02/08 09:58:19 by monoue           ###   ########.fr       */
+/*   Updated: 2021/02/08 10:11:54 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ t_list	*ft_lstmap(t_list *src, void *(*f)(void *), void (*del)(void *))
 		tmp = ft_lstnew(f(src_copy->content));
 		if (!tmp)
 		{
-			ft_lstclear(dst, del);
+			ft_lstclear(&dst, del);
 			return (NULL);
 		}
-		ft_lstadd_back(dst, tmp);
+		ft_lstadd_back(&dst, tmp);
 		src_copy = src_copy->next;
 	}
 	return (dst);
