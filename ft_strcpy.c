@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: monoue <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 11:50:23 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/27 12:25:26 by monoue           ###   ########.fr       */
+/*   Updated: 2021/02/10 08:22:08 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@ char	*ft_strcpy(char *dst, const char *src)
 {
 	size_t	index;
 
+	if (!dst)
+		return (NULL);
+	if (!src)
+		return (dst);
 	index = 0;
 	while (src[index] != '\0')
 	{

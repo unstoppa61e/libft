@@ -83,6 +83,7 @@ ADDED += ft_strncpy.c
 ADDED += ft_strnequal.c
 ADDED += ft_putendl.c
 ADDED += ft_putendl_err.c
+ADDED += ft_strnjoin.c
 
 FT_PRINTF += $(FT_PRINTF_PATH)apply_margin.c
 FT_PRINTF += $(FT_PRINTF_PATH)cut_out_format.c

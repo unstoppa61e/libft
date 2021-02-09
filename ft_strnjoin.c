@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strnjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/27 07:16:04 by monoue            #+#    #+#             */
-/*   Updated: 2021/02/10 08:21:32 by monoue           ###   ########.fr       */
+/*   Created: 2020/06/26 16:01:19 by monoue            #+#    #+#             */
+/*   Updated: 2021/02/10 06:30:09 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+char	*ft_strnjoin(char const *s1, char const *s2, size_t n)
 {
-	size_t	index;
+	const size_t	s1_len = ft_strlen(s1);
+	const size_t	join_len = ft_strnlen(s2, n);
+	char			*ret_s;
 
-	if (!dst)
+	if (!s1 || !s2)
 		return (NULL);
-	if (!src)
-		return (dst);
-	index = 0;
-	while (index < len && src[index] != '\0')
-	{
-		dst[index] = src[index];
-		index++;
-	}
-	while (index < len)
-	{
-		dst[index] = '\0';
-		index++;
-	}
-	return (dst);
+	ret_s = malloc((s1_len + join_len + 1) * sizeof(char));
+	if (!ret_s)
+		return (NULL);
+	ft_strcpy(ret_s, s1);
+	ft_strncpy(&ret_s[s1_len], s2, join_len);
+	return (ret_s);
 }
