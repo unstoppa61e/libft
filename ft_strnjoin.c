@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 16:01:19 by monoue            #+#    #+#             */
-/*   Updated: 2021/02/10 08:53:47 by monoue           ###   ########.fr       */
+/*   Updated: 2021/02/10 10:15:30 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ char	*ft_strnjoin(char const *s1, char const *s2, size_t n)
 		return (NULL);
 	ft_strcpy(ret_s, s1);
 	ft_strncpy(&ret_s[s1_len], s2, s2_nlen);
+	ret_s[s1_len + s2_nlen] = '\0';
 	return (ret_s);
 }
