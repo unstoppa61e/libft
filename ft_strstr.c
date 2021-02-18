@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/24 17:11:03 by monoue            #+#    #+#             */
-/*   Updated: 2020/10/20 09:39:22 by monoue           ###   ########.fr       */
+/*   Updated: 2021/02/18 11:50:57 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	const size_t	n_len = ft_strlen(needle);
 	size_t			index;
 
-	if (haystack == NULL || needle == NULL || n_len > h_len)
+	if (!haystack || n_len > h_len)
 		return (NULL);
-	if (needle[0] == '\0')
+	if (!needle)
 		return ((char *)haystack);
 	index = 0;
-	while (index + n_len <= h_len)
+	while (index < h_len - n_len + 1)
 	{
-		if (ft_strncmp(&haystack[index], needle, n_len) == 0)
+		if (ft_strnequal(&haystack[index], needle, n_len))
 			return ((char *)&haystack[index]);
 		index++;
 	}
