@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 07:51:48 by monoue            #+#    #+#             */
-/*   Updated: 2021/02/08 10:20:32 by monoue           ###   ########.fr       */
+/*   Updated: 2021/02/25 07:09:03 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putendl_err(const char *s)
 {
 	ft_putstr_err(s);
-	ft_putchar('\n');
+	ft_putchar_err('\n');
 }
