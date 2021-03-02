@@ -6,7 +6,7 @@ BONUS =
 ADDED =
 FT_PRINTF =
 SRCS =		$(PART1) $(PART2) $(BONUS) $(ADDED) $(FT_PRINTF)
-CFLAGS =	-Wall -Wextra -Werror
+CFLAGS = -g -Wall -Wextra -Werror
 INCLUDE = libft.h
 
 FT_PRINTF_PATH = ft_printf/
@@ -83,12 +83,14 @@ ADDED += ft_strncpy.c
 ADDED += ft_strnequal.c
 ADDED += ft_putendl.c
 ADDED += ft_putendl_err.c
+ADDED += ft_strndup.c
 ADDED += ft_strnjoin.c
 ADDED += ft_strjoin_free.c
 ADDED += ft_strnjoin_free.c
 ADDED += ft_substr_free.c
 ADDED += ft_putchar_err.c
-ADDED += safe_free.c
+ADDED += ft_atoll.c
+ADDED += ft_atoull.c
 
 FT_PRINTF += $(FT_PRINTF_PATH)apply_margin.c
 FT_PRINTF += $(FT_PRINTF_PATH)cut_out_format.c

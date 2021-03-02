@@ -6,7 +6,7 @@
 /*   By: monoue <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 11:56:31 by monoue            #+#    #+#             */
-/*   Updated: 2021/02/11 12:15:49 by monoue           ###   ########.fr       */
+/*   Updated: 2021/03/03 08:18:26 by monoue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,8 @@ void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
-char				*ft_strchr(const char *s, int c);
-char				*ft_strrchr(const char *s, int c);
+char				*ft_strchr(const char *s, const int c);
+char				*ft_strrchr(const char *s, const int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strnstr(const char *haystack, const char *needle,
 																size_t len);
@@ -136,6 +136,6 @@ char				*ft_strnjoin_free(char *s1, const char *s2, size_t n);
 char				*ft_substr_free(char *original_s, unsigned int start_index,
 																	size_t len);
 void				ft_putchar_err(char c);
-void				safe_free(void *ptr);
-
+long long			ft_atoll(const char *str);
+unsigned long long	ft_atoull(const char *str);
 #endif
