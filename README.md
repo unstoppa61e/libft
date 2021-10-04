@@ -30,7 +30,6 @@ Using malloc, free, and write as needed was permitted. Various original and requ
 |---------------|----------------|--------------|-------------|-------------|
 |ft_lstadd_back |ft_lstadd_front |ft_lstiter    |ft_lstdelone |ft_lstsize   |
 |ft_lstclear    |ft_lstmap       |ft_listlast   |ft_lstnew    |ft_lstprint  |
-|ft_lstprint_int|                |              |             |             |
 
 ### Original functions
 Using only malloc, free, write, and exit per school rules.
