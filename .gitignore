@@ -11,3 +11,4 @@ includes
 .DS_Store
 .vscode
 *.swp
+.idea
